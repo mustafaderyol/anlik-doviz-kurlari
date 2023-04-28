@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+  <head>
+    <title>doviz</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .borsa-widget-top a:link {
+        text-decoration: none;
+      }
+      .borsa-widget-top {
+        position: relative;
+        background-color: #fff;
+      }
+      .borsa-widget-top .borsa-widget-wrapper {
+        position: relative;
+        z-index: 1;
+        height: 40px;
+        width: 100%;
+        max-width: 1010px;
+        min-width: 1010px;
+        /*1495*/
+        margin: 0;
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .borsa-widget-top .borsa-widget-wrapper .right {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .borsa-widget-top .borsa-widget-wrapper .right .borsa-widget-group {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .borsa-widget-top .borsa-widget-wrapper .right .borsa-widget-group a {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        font-size: 12px;
+        padding: 0px 5px;
+        width: 200px;
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a.up
+        .rate {
+        color: #39b54a;
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a.down
+        .rate {
+        color: #ec1c24;
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a
+        .name {
+        position: relative;
+        margin-right: 4px;
+        font-weight: bold;
+        padding-left: 15px;
+        color: #333;
+        line-height: 30px;
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a
+        .PercentChange {
+        color: #333;
+        font-weight: bold;
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a
+        .rate {
+        margin-right: 4px;
+        font-weight: bold;
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a
+        span {
+        color: #333;
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a
+        .name {
+        padding: 0;
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a
+        .name
+        i.fa-caret-up {
+        font-size: 15px;
+        color: #39b54a;
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a
+        .name
+        i.fa-caret-down {
+        font-size: 15px;
+        color: #ec1c24;
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a.change {
+        animation: dynamic-light 1s infinite;
+      }
+      @keyframes dynamic-light {
+        0% {
+          background-color: rgb(181, 181, 181);
+        }
+        50% {
+          background-color: rgb(255, 255, 255);
+        }
+        100% {
+          background-color: rgb(181, 181, 181);
+        }
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a.live-su-endeks
+        .rate-icon {
+        padding-bottom: 3px;
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a.live-su-endeks
+        .rate-icon
+        img {
+        display: block;
+        width: auto;
+        height: 22px;
+      }
+      .borsa-widget-top
+        .borsa-widget-wrapper
+        .right
+        .borsa-widget-group
+        a.live-su-endeks
+        .su-value {
+        color: #02bc33;
+        font-weight: bold;
+        padding-top: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="borsa-widget-top">
+      <div class="borsa-widget-wrapper">
+        <div class="left"></div>
+        <div class="right">
+          <div class="borsa-widget-group">
+            <a
+              id="dolar"
+              href="#"
+              class="gtm-tracker up"
+            >
+              <span class="name"
+                ><i class="fa fa-caret-up" aria-hidden="true"></i> Dolar</span
+              >
+              <span class="rate up LastPrice"></span>
+              <span class="PercentChange"></span>
+            </a>
+
+            <a
+              id="euro"
+              href="#"
+              class="gtm-tracker up"
+            >
+              <span class="name"
+                ><i class="fa fa-caret-up" aria-hidden="true"></i> Euro</span
+              >
+              <span class="rate up LastPrice"></span>
+              <span class="PercentChange"></span>
+            </a>
+
+            <a
+              id="bist-100"
+              href="#"
+              class="gtm-tracker up"
+            >
+              <span class="name"
+                ><i class="fa fa-caret-up" aria-hidden="true"></i> Bist
+                100</span
+              >
+              <span class="rate up LastPrice"></span>
+              <span class="PercentChange"></span>
+            </a>
+
+            <a
+              id="bitcoin"
+              href="#"
+              class="gtm-tracker up"
+            >
+              <span class="name"
+                ><i class="fa fa-caret-up" aria-hidden="true"></i> Bitcoin
+                100</span
+              >
+              <span class="rate up LastPrice"></span>
+              <span class="PercentChange"></span>
+            </a>
+
+            <a
+              id="gram-altin"
+              href="#"
+              class="gtm-tracker up"
+            >
+              <span class="name"
+                ><i class="fa fa-caret-up" aria-hidden="true"></i> Altın</span
+              >
+              <span class="rate up LastPrice"></span>
+              <span class="PercentChange"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        let socket = new WebSocket("wss://nc.ciner.com.tr/sub/htfinans");
+        socket.onopen = function (e) {
+          console.log("[open] Connection established");
+        };
+
+        socket.onmessage = function (event) {
+          const data = JSON.parse(event.data);
+          console.log(data);
+          $("#" + data.SecuritySlug).addClass("change");
+          $("#" + data.SecuritySlug + " .LastPrice").html(data.LastPrice);
+          $("#" + data.SecuritySlug + " .PercentChange").html(
+            data.PercentChange
+          );
+          if (data.PriceChange > 0) {
+            $("#" + data.SecuritySlug + " .PercentChange").addClass("up");
+            $("#" + data.SecuritySlug + " .PercentChange").removeClass("down");
+            $("#" + data.SecuritySlug + " .LastPrice").addClass("up");
+            $("#" + data.SecuritySlug + " .LastPrice").removeClass("down");
+            $("#" + data.SecuritySlug).addClass("up");
+            $("#" + data.SecuritySlug).removeClass("down");
+            $("#" + data.SecuritySlug + " .name i").addClass("fa-caret-up");
+            $("#" + data.SecuritySlug + " .name i").removeClass(
+              "fa-caret-down"
+            );
+          } else {
+            $("#" + data.SecuritySlug + " .PercentChange").removeClass("up");
+            $("#" + data.SecuritySlug + " .PercentChange").addClass("down");
+            $("#" + data.SecuritySlug + " .LastPrice").removeClass("up");
+            $("#" + data.SecuritySlug + " .LastPrice").addClass("down");
+            $("#" + data.SecuritySlug).removeClass("up");
+            $("#" + data.SecuritySlug).addClass("down");
+            $("#" + data.SecuritySlug + " .name i").removeClass("fa-caret-up");
+            $("#" + data.SecuritySlug + " .name i").addClass("fa-caret-down");
+          }
+          setTimeout(function () {
+            $("#" + data.SecuritySlug).removeClass("change");
+          }, 300);
+        };
+
+        socket.onclose = function (event) {
+          if (event.wasClean) {
+            console.log(
+              `[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`
+            );
+          } else {
+            console.log("[close] Connection died");
+          }
+        };
+
+        socket.onerror = function (error) {
+          console.log(`[error]`);
+        };
+      });
+    </script>
+  </body>
+</html>
